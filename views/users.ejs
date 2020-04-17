@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+        <h1><%= title %></h1>
+        <p>Welcome to <%= title %></p>
+        <div id="app">
+            {{ message }}
+            <hello-user></hello-user>
+        </div>
+        <div><a href="/">go to index</a></div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+        <script src="/js/users.js"></script>
+        <script>
+            var app = new Vue({
+                el: "#app",
+                data: {
+                    message: "안녕하세요 Vue!",
+                },
+            });
+        </script>
+    </body>
+</html>
